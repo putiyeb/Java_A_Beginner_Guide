@@ -19,3 +19,31 @@ class Test {
 output:
 
 8	10	is	80
+
+
+
+	
+class Vehicle {
+	int passengers;
+	int fuelcap;
+	int mpg;
+
+	int range(){
+		return fuelcap*mpg;
+	}
+}
+
+class Test {
+	public static void main(String args[]) {
+		Vehicle minivan = new Vehicle();
+		minivan.passengers = 4;
+		minivan.fuelcap = 8;
+		minivan.mpg = 10;
+		int a = minivan.range();
+		System.out.print(minivan.fuelcap+"\t"+minivan.mpg+"\tis\t"+a);
+	}
+}
+
+output:
+
+8	10	is	80
