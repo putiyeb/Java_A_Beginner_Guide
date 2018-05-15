@@ -1,0 +1,65 @@
+class ChkNum {
+	boolean isEven(int x){
+		if(x!=0 && (x%2)==0){
+			return true;
+		}
+		else return false;
+	}
+}
+
+class Test {
+	public static void main(String args[]) {
+		ChkNum e = new ChkNum();
+		int i=10;
+		if(e.isEven(i)) System.out.print("The number 10 is even.");
+	}
+}
+
+output:
+
+The number 10 is even.
+
+
+class ChkNum {
+	boolean isEven(int x,int y){
+		if(x!=0 && (y%x)==0){
+			return true;
+		}
+		else return false;
+	}
+}
+
+class Test {
+	public static void main(String args[]) {
+		ChkNum e = new ChkNum();
+		int i=10,j=33;
+		if(e.isEven(i,j)) System.out.print("The number " + i +" is the factor of " + j);
+		else System.out.print("The number " + i +" is not the factor of " + j);
+	}
+}
+
+output:
+
+The number 10 is not the factor of 33
+
+
+class ChkNum {
+	double isEven(int x,int y){
+		if(x!=0 && (y%x)==0){
+			return y/x ;
+		}
+		else return (double)y-x;
+	}
+}
+
+class Test {
+	public static void main(String args[]) {
+		ChkNum e = new ChkNum();
+		int i=10,j=33;
+		System.out.println(e.isEven(i,j));
+	}
+}
+
+output:
+
+23.0
