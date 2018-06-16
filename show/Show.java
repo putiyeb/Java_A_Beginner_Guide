@@ -6,3 +6,9 @@ class Show{
         System.out.println(a.area());
     }
 }
+
+
+/* output:
+
+113.03999999999999
+*/
