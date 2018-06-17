@@ -21,3 +21,9 @@ class Show{
         a.getName();
     }
 }
+
+
+/* output:
+
+113.03999999999999
+*/
