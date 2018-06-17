@@ -1,8 +1,8 @@
 package test;
 
 abstract class TwoDShape {
-	public double width;
-	public double highth;
+	protected double width;
+	protected double highth;
 	TwoDShape(double a, double b){
 		width = a;
 		highth = b;
@@ -16,5 +16,11 @@ public class Circle extends TwoDShape{
 	}
 	public double area(){
 		return 3.14*width*highth;
+	}
+	public double getWidth(){
+		return width;
+	}
+	public void setWidth(double a){
+		width = a;
 	}
 }
