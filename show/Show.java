@@ -1,6 +1,7 @@
 package show;
+import test.Circle;
 
-class Tcircle extends test.Circle{
+class Tcircle extends Circle{
     public Tcircle(double a,double b, String c){
         super(a,b);
         name = c;
@@ -25,5 +26,11 @@ class Show{
 
 /* output:
 
+java show/Show
+javac show/Show.java
+
 113.03999999999999
 */
+
+
+
