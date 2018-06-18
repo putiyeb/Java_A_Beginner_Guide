@@ -86,3 +86,21 @@ class IQDemo{
         }
     }
 }
+
+/*
+javac test/IQDemo.java
+java test/IQDemo
+
+output:
+Full
+a
+b
+Full
+Full
+Empty
+Empty
+Empty
+Empty
+
+
+*/
