@@ -11,6 +11,9 @@ class b implements a{
     public int MyID(){
         return 2;
     }
+    public int AdminID(){
+        return 5;
+    }
 }
 
 class IDefaultM{
