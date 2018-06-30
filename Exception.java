@@ -248,3 +248,106 @@ Out of bound!
 Out of bound!
 After
 */
+
+
+class genExcept{
+    public void gen(){
+        int[] a = {3,4,45,5,6,43,56,5,5};
+        int[] b = {546,567,0,3564,6};
+        for(int i = 0; i < a.length; i++){
+            try{
+                double t = a[i]/b[i];
+                System.out.println(a[i] + " divided " + b[i] + " is " + t);
+                // if(i == 3){
+                //     a[i] = 5.6;
+                // }
+            }
+            catch(ArrayIndexOutOfBoundsException exc){
+                System.out.println("Out of bound!");
+            }
+            // catch(ArithmeticException exc){
+            //     System.out.println("Can't divided by 0");
+            //     System.out.println(exc);
+            // }
+            catch(Throwable exc){
+                System.out.println("Unknown Error");
+                System.out.println(exc);
+            }
+        }
+        // return;
+    }
+}
+
+class Test{
+    public static void main(String args[]){
+        genExcept c = new genExcept();
+        c.gen();
+        System.out.println("After");
+    }
+}
+
+/*
+$ java Exception
+3 divided 546 is 0.0
+4 divided 567 is 0.0
+Unknown Error
+java.lang.ArithmeticException: / by zero
+5 divided 3564 is 0.0
+6 divided 6 is 1.0
+Out of bound!
+Out of bound!
+Out of bound!
+Out of bound!
+After
+*/
+class genExcept{
+    public void gen(){
+        int[] a = {3,4,45,5,6,43,56,5,5};
+        int[] b = {546,567,0,3564,6};
+        for(int i = 0; i < a.length; i++){
+            try{
+                double t = (double)a[i]/(double)b[i];
+                System.out.println(a[i] + " divided " + b[i] + " is " + t);
+                // if(i == 3){
+                //     a[i] = 5.6;
+                // }
+            }
+            catch(ArrayIndexOutOfBoundsException exc){
+                System.out.println("Out of bound!");
+            }
+            // catch(ArithmeticException exc){
+            //     System.out.println("Can't divided by 0");
+            //     System.out.println(exc);
+            // }
+            catch(Throwable exc){
+                System.out.println("Unknown Error");
+                System.out.println(exc);
+            }
+        }
+        // return;
+    }
+}
+
+class Test{
+    public static void main(String args[]){
+        genExcept c = new genExcept();
+        c.gen();
+        System.out.println("After");
+    }
+}
+
+/*
+$ java Exception
+3 divided 546 is 0.005494505494505495
+4 divided 567 is 0.007054673721340388
+45 divided 0 is Infinity
+5 divided 3564 is 0.0014029180695847362
+6 divided 6 is 1.0
+Out of bound!
+Out of bound!
+Out of bound!
+Out of bound!
+After
+*/
+
+
