@@ -97,3 +97,38 @@ CAR
 CAR
 
 */
+
+
+
+enum Transport{
+    CAR, AIRPLANE, TRUCK, TRAIN, BOAT
+}
+
+class Test{
+
+    public static void main(String args[]){
+        Transport tp;
+        tp = Transport.CAR;
+
+        if(tp == Transport.CAR){
+            System.out.println(Transport.CAR);
+        }
+
+        switch(tp){
+            case CAR:
+            System.out.println("CAR");
+            break;
+            case TRUCK:
+            System.out.println("TRUCK");
+            break;
+            default:
+            System.out.println("Transport");
+        }
+    }
+}
+
+/*
+CAR
+CAR
+
+*/
