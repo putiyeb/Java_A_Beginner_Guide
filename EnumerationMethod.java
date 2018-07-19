@@ -97,3 +97,36 @@ class Test{
 Truck speed is 40.76
 
 */
+
+
+
+enum Transport{
+    CAR(34.65), AIRPLANE(345.43), TRUCK(40.76), TRAIN(124.45), BOAT(50.34);
+
+    private double speed;
+
+    Transport(double sp) { speed = sp; }
+
+    double getSpeed(){ return speed; }
+}
+
+class Test{
+
+    public static void main(String args[]){
+
+        for(Transport t : Transport.values()){
+            System.out.print(t.ordinal() + "\t");
+        }
+
+        System.out.println();
+
+        System.out.println("Truck speed is " + Transport.TRUCK.ordinal());
+
+    }
+}
+
+/*
+0	1	2	3	4	
+Truck speed is 2
+
+*/
