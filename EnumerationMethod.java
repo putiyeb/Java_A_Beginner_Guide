@@ -130,3 +130,41 @@ class Test{
 Truck speed is 2
 
 */
+
+
+
+enum Transport{
+    CAR(34.65), AIRPLANE(345.43), TRUCK(40.76), TRAIN(124.45), BOAT(50.34);
+
+    private double speed;
+
+    Transport(double sp) { speed = sp; }
+
+    double getSpeed(){ return speed; }
+}
+
+class Test{
+
+    public static void main(String args[]){
+
+        Transport tp1 = Transport.CAR;
+        Transport tp2 = Transport.BOAT;
+
+        System.out.println(tp1.compareTo(tp2));
+
+        System.out.println(tp1.compareTo(Transport.TRUCK));
+
+        System.out.println(tp2.compareTo(tp1));
+
+        System.out.println(tp2.compareTo(Transport.AIRPLANE));
+
+    }
+}
+
+/*
+-4
+-2
+4
+3
+
+*/
