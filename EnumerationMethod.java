@@ -27,3 +27,73 @@ CAR	AIRPLANE	TRUCK	TRAIN	BOAT
 tpCAR
 
 */
+
+
+
+enum Transport{
+    CAR(34.65), AIRPLANE(345.43), TRUCK(40.76), TRAIN(124.45), BOAT(50.34);
+
+    private double speed;
+
+    Transport(double sp) { speed = sp; }
+
+    double getSpeed(){ return speed; }
+}
+
+class Test{
+
+    public static void main(String args[]){
+        Transport tp =  Transport.TRUCK;
+
+        Transport allTransport[] = Transport.values();
+
+        for(Transport t : allTransport){
+            System.out.print(t.getSpeed() + "\t");
+        }
+
+        System.out.println();
+
+        System.out.println("tp" + tp.getSpeed());
+
+    }
+}
+
+
+/*
+34.65	345.43	40.76	124.45	50.34	
+tp40.76
+
+*/
+
+
+
+enum Transport{
+    CAR(34.65), AIRPLANE(345.43), TRUCK(40.76), TRAIN(124.45), BOAT(50.34);
+
+    private double speed;
+
+    Transport(double sp) { speed = sp; }
+
+    double getSpeed(){ return speed; }
+}
+
+class Test{
+
+    public static void main(String args[]){
+
+        for(Transport t : Transport.values()){
+            System.out.print(t.getSpeed() + "\t");
+        }
+
+        System.out.println();
+
+        System.out.println("Truck speed is " + Transport.TRUCK.getSpeed());
+
+    }
+}
+
+/*
+34.65	345.43	40.76	124.45	50.34	
+Truck speed is 40.76
+
+*/
