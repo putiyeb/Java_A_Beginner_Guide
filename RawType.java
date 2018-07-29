@@ -88,3 +88,51 @@ Exception in thread "main" java.lang.ClassCastException: java.base/java.lang.Int
 */
 
 
+class Gen<T>{
+
+    T ob;
+
+    Gen(T o){
+        ob = o;
+    }
+
+    T getob(){
+        return ob;
+    }
+
+}
+
+class Test{
+    public static void main (String args[]){
+        Gen raw = new Gen(89);
+        Gen<Integer> iOb = new Gen<Integer>(55);
+        raw = iOb;
+        double d = (Integer) raw.getob();
+        System.out.println(d);
+    }
+}
+
+/*
+$ javac -Xlint Test.java
+Test.java:17: warning: [rawtypes] found raw type: Gen
+        Gen raw = new Gen(89);
+        ^
+  missing type arguments for generic class Gen<T>
+  where T is a type-variable:
+    T extends Object declared in class Gen
+Test.java:17: warning: [rawtypes] found raw type: Gen
+        Gen raw = new Gen(89);
+                      ^
+  missing type arguments for generic class Gen<T>
+  where T is a type-variable:
+    T extends Object declared in class Gen
+Test.java:17: warning: [unchecked] unchecked call to Gen(T) as a member of the raw type Gen
+        Gen raw = new Gen(89);
+                  ^
+  where T is a type-variable:
+    T extends Object declared in class Gen
+3 warnings
+
+$ java Test.java
+55.0
+*/
