@@ -18,6 +18,10 @@ javac --module-path appmodules -d appmodules/appfuncs appsrc/appfuncs/appfuncs/s
 $ java --module-path appmodules -m appstart/appstart.mymodappdemo.MyModAppDemo
 
 
+javac --module-source-path appsrc -d appmodules appsrc/appfuncs/appfuncs/simplefuncs/SimpleMathFuncs.java appsrc/appfuncs/module-info.java
+
+javac --module-path appmodules -d appmodules/appstart appsrc/appstart/module-info.java appsrc/appstart/appstart/mymodappdemo/MyModAppDemo.java
+
 error: in multi-module mode, the output directory cannot be an exploded module
 
 just remove the module directory and recompile
