@@ -24,6 +24,6 @@ javac --module-path appmodules -d appmodules/appstart appsrc/appstart/module-inf
 
 error: in multi-module mode, the output directory cannot be an exploded module
 
-just remove the module directory and recompile
+just remove the wrong module directory and recompile
 
 
